@@ -87,6 +87,7 @@
     display: grid;
     grid-template-columns: 60% 40%;
     align-items: center;
+    background: rgb(180, 180, 180);
 }
 
 .information-main {
@@ -134,7 +135,86 @@
     color: rgb(74, 74, 74);
 }
 
-@media screen and (max-width: 700px) {
+
+.course {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+    padding: 72px;
+    box-sizing: border-box;
+    background: lightgrey;
+    line-height: 32px;
+    color: rgb(74,74,74);
+}
+
+.course-thumbnails {
+    width: 100%;
+    background: white;
+    padding: 8px;
+}
+
+.course-thumbnails img {
+    width: 100%;
+}
+
+
+.thesis {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 24px;
+    margin: 24px;
+    box-sizing: border-box;
+}
+
+.thesis-vid video{
+    width: 100%;
+}
+.thesis-thumbnails{
+    display: flex;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.thesis-thumbnails img {
+    width: 35%;
+}
+
+.thesis-info {
+    padding: 16px;
+}
+
+.thesis-info p {
+    padding: 16px 0;
+}
+
+.thesis-vid h1, p {
+    color: rgb(74, 74, 74);
+    padding: 16px 0;
+}
+
+footer {
+    height: 64px;
+    align-items: center;
+    display: flex;
+}
+
+footer p {
+    margin-right: auto;
+    padding-left: 24px;
+}
+
+footer ul {
+    float: right;
+    padding: 24px;
+}
+
+footer ul li {
+    display: inline;
+    padding-left: 24px;
+}
+
+@media screen and (max-width: 768px) {
     .mobile{
         display: inline;
         text-align: center;
@@ -147,5 +227,55 @@
     }
     .desktop {
         display: none;
+    }
+
+    .banner {
+        display: block;
+        text-align: center;
+    }
+
+    .banner a {
+        text-align: center;
+        margin: auto;
+    }
+
+    .information {
+        display: block;
+    }
+
+    .information-main {
+        display: none;
+    }
+    .information-second, .thumbnails {
+        display: block;
+        text-align: center;
+    }
+    .thumbnails img {
+        width: 80%;
+    }
+
+    .course {
+        display: block;
+    }
+    .course img, p, h4 {
+        display: none;
+    }
+    .course-thumbnails {
+        margin-bottom: 8px;
+    }
+
+    .thesis {
+        display: block;
+    }
+    .thesis-thumbnails, h1 {
+        display: block;
+        text-align: center;
+    }
+
+    .thesis-thumbnails img {
+        display: none;
+    }
+    footer {
+        display: block;
     }
 }
